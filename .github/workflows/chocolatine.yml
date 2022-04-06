@@ -20,7 +20,7 @@ jobs:
           for FILES in $INCORECT_FILES; do
             echo "::error file=${FILE#./}, title=Unwanted file detected::${FILE#./}"
           done
-          if [-n $INCORECT_FILES]; then
+          if [[-n $INCORECT_FILES]]; then
             exit 1
           fi
   
