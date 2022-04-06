@@ -31,7 +31,7 @@ jobs:
     container:
       image: epitechcontent/epitest-docker
     steps:
-      - uses: action/checkout@v3
+      - uses: actions/checkout@v3
       - id: check_program_compilation
         timeout-minutes: 2
         run: |
