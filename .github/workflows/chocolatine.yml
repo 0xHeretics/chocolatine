@@ -39,7 +39,7 @@ jobs:
    
   run_test:
    needs: [check_program_compilation]
-   name: "Run test job"
+   name: "Run test jobs"
    runs-on: ubuntu-latest
    container:
       image: epitechcontent/epitest-docker:latest
