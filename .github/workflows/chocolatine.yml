@@ -19,7 +19,8 @@ jobs:
       - id: check_repository_cleanliness
         run: |
           INCORECT_FILES=$(find . -type f -not -path "./.git/*" -wholename "*tmp/*" -or -iname "*pain_au_chocolat*" -or -name "*~" -or -name "#*#" -or -name "*.o" -or -name "*.a" -or -name "*.so" -or -name "*.gcno" -or -name "*.gdca" -or -name "*.gcov")
-          for FILES in $INCORECT_FILES; do
+          for FILES in $INCORECT_FILES;
+          do
             echo "::error file=${FILES#./},title=Unwanted file detected::${FILES#./}"
           done
           if [[ -n $INCORECT_FILES ]]
